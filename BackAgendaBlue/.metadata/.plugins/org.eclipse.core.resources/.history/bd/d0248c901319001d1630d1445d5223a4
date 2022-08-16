@@ -1,0 +1,25 @@
+package br.com.agenda.agenda.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import br.com.agenda.agenda.model.Contato;
+
+@RestController
+@RequestMapping("/contato")
+public class AgendaController {
+	
+	
+	@GetMapping("/")
+	public Contato contato() {
+		Contato contato = new Contato();
+		contato.setId(1L);
+		contato.setNome("Frank");
+		contato.setEmail("frank@gmail.com");
+		contato.setTelefone("995350334");
+		return contato;
+		
+	}
+
+}
